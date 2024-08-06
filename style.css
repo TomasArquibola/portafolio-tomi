@@ -1,0 +1,315 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    background-color: #202020;
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: backgroundTransition 4s infinite alternate;
+}
+
+@keyframes backgroundTransition {
+    0% { background-color: #202020; }
+    25% { background-color: #2c2c2c; }
+    50% { background-color: #383838; }
+    75% { background-color: #2c2c2c; }
+    100% { background-color: #202020; }
+}
+
+/* Estilos para texto destacado */
+.nombre-destacado {
+    color: rgb(0, 121, 255);
+    background: linear-gradient(90deg, rgba(0, 121, 255, 1) 0%, rgba(255, 0, 249, 1) 46%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos para la sección de inicio */
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.inicio h1 {
+    font-size: 80px;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+.inicio h2 {
+    font-family: monospace;
+    font-size: 40px;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+
+}
+/* Estilos para las imágenes */
+.imagen_programador img{
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+}
+.imagen_programador {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+
+.imagen_del_proyecto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+.imagen_del_proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Efecto de agrandamiento al hacer hover sobre imágenes */
+img {
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la sección "Sobre mí" */
+.sobre_mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sobre_mi h2 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.sobre_mi div {
+    font-family: monospace;
+    font-size: 20px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #71ffe7;
+    max-width: 800px;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+.sobre_mi:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la sección de lenguajes */
+.lenguajes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+}
+
+.lenguaje {
+    font-family: monospace;
+    font-size: 20px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #616bff;
+    max-width: 800px;
+    width: 45%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lenguaje img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.lenguaje:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la sección de proyectos */
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+.project {
+    font-family: monospace;
+    font-size: 20px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #f700ff;
+    max-width: 800px;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+/* Estilos para el header y la navegación */
+header {
+    background-color: #0a0f1b;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Barra de progreso */
+.bar-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.bar {
+    height: 20px;
+    background-color: #ff6961;
+    border-radius: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInMobile {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos adicionales */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6347;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .inicio {
+        margin-left: 0;
+        margin-top: 50px;
+        display: block;
+        text-align: center;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio h2 {
+        font-size: 20px;
+    }
+
+    .lenguajes-container,
+    .project-container,
+    .sobre_mi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lenguaje,
+    .project,
+    .sobre_mi div {
+        width: 90%;
+    }
+
+    .inicio h1,
+    .inicio h2 {
+        animation: fadeInMobile 2s ease-in forwards;
+    }
+}
